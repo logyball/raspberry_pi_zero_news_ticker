@@ -23,5 +23,5 @@ def get_national():
     
 
 def get_local():
-    url = f'https://news.google.com/news/rss/headlines/section/geo/{STATE}'
+    url = 'https://news.google.com/news/rss/headlines/section/geo/{}'.format(STATE)
     return get_stories(url)

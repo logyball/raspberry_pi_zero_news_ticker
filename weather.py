@@ -8,7 +8,7 @@ with open('./.api_keys.json', 'r') as f:
     API_KEY = keys.get('open-weather')
 
 def get_weather():
-    res = requests.get(f'http://api.openweathermap.org/data/2.5/weather?zip={ZIPCODE},us&appid={API_KEY}&units=imperial')
+    res = requests.get('http://api.openweathermap.org/data/2.5/weather?zip={0},us&appid={1}&units=imperial'.format(ZIPCODE, API_KEY))
     weather = json.loads(res.content)
     cur_weather = weather.get('main')
     return cur_weather
