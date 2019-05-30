@@ -3,8 +3,8 @@
 import feedparser, ssl
 
 STATE = 'Oregon'
-
 ssl._create_default_https_context=ssl._create_unverified_context
+
 
 def get_stories(url):
     parsed_rss = feedparser.parse(url)
@@ -22,10 +22,12 @@ def get_national():
     info = get_stories(url)
     print(info)
 
+
 def get_local():
     url = f'https://news.google.com/news/rss/headlines/section/geo/{STATE}'
     info = get_stories(url)
     print(info)
+
 
 get_national()
 get_local()
