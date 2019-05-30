@@ -19,15 +19,9 @@ def get_stories(url):
 
 def get_national():
     url = 'https://news.google.com/rss'
-    info = get_stories(url)
-    print(info)
-
+    return get_stories(url)
+    
 
 def get_local():
     url = f'https://news.google.com/news/rss/headlines/section/geo/{STATE}'
-    info = get_stories(url)
-    print(info)
-
-
-get_national()
-get_local()
+    return get_stories(url)
