@@ -1,7 +1,7 @@
 #!/bin/bash
 
-apt-get update
-apt-get install python3-pip python3-scrollphathd -y
+sudo apt-get update
+sudo apt-get install python3-pip python3-scrollphathd -y
 
-$(which pip3) install -r requirements.txt
-$(which python3) polling.py
+sudo $(which pip3) install -r requirements.txt
+sudo $(which python3) polling.py
