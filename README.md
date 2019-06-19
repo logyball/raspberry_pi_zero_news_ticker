@@ -36,12 +36,12 @@ Note: when your Pi is connected to Wifi (but not your computer), you may have to
 
 ## Loading the ticker/weather
 
-Begin by using ssh to connect to your Pi.  You must enable 
+Begin by using ssh to connect to your Pi.  You must enable I2C communcation such that the ScrollPhat HD can actually be operated by the Pi:
 
-1. `sudo raspi-config`
-2. `5. Interfacing Options`
-3. `P5 I2C`
-4. `Would you like the ARM I2C interface to be enabled?` -> Yes
+- (From the command line) `sudo raspi-config`
+- `5. Interfacing Options`
+- `P5 I2C`
+- `Would you like the ARM I2C interface to be enabled?` -> Yes
 
 If `git` is not installed, install via `apt`:
 
