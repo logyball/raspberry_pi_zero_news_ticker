@@ -1,9 +1,12 @@
 # get the top 3 headlines split up by state and national news
 
-import feedparser, ssl
+import feedparser, ssl, json
 
-STATE = 'Oregon'
 ssl._create_default_https_context=ssl._create_unverified_context
+with open('./.vars.json', 'r') as f:
+    keys = json.loads(f.read())
+    STATE = keys.get('news-state', 'Oregon')
+
 
 
 def get_stories(url):
